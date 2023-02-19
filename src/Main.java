@@ -5,11 +5,11 @@ public class Main {
         long max = manager.max();
         System.out.println("Максимум продаж в день - " + max);
     
-        int minP = sales[0];
-        int maxP = sales[0];
-        int sumP = 0;
+        long minP = sales[0];
+        long maxP = sales[0];
+        long sumP = 0;
 
-        for (int i = 0; i < sales.length; i++) {
+        for (long i = 0; i < sales.length; i++) {
             if (sales[i] < minP) {
                 minP = sales[i];
             }
@@ -19,7 +19,7 @@ public class Main {
             sumP += sales[i];
         }
 
-        int stat = (sumP - minP - maxP) / (sales.length - 2);
+        long stat = (sumP - minP - maxP) / (sales.length - 2);
 
         System.out.println("Обрезанное среднее равно: " + stat);
     }
